@@ -23,8 +23,8 @@ export default function RootLayout({
           content="/assets/images/projectkrowdlogo.png"
         />
         <meta property="og:image:type" content="image/svg+xml" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:image:width" content="50" />
+        <meta property="og:image:height" content="50" />
         <meta property="og:image:alt" content="logo" />
         <meta name="image" content="/assets/images/projectkrowdlogo.png" />
         <meta name="description" content="Know where the party is." />
