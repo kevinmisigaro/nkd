@@ -6,8 +6,16 @@ import RootLayout from "./layout";
 import { saria } from "@/utils/font";
 import PlaceCard from "@/components/PlaceCard";
 import EventCard from "@/components/EventCard";
+import { animateScroll as scroll } from "react-scroll";
 
 export default function Home() {
+  const scrollToId = () => {
+    const element = document.getElementById("trending");
+    if (element) {
+      const offset = element.offsetTop;
+      scroll.scrollTo(offset);
+    }
+  };
   const getData = async () => {
     const { data, error } = await supabase.from("places").select("*");
 
@@ -39,15 +47,16 @@ export default function Home() {
 
             <div className="flex flex-row justify-center mt-20">
               <img
+                onClick={scrollToId}
                 src="/assets/images/icons8-scroll-down-50.png"
-                className="w-10 animate-bounce"
+                className="w-10 animate-bounce cursor-pointer"
               />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="px-5 md:px-20 py-20 mt-4">
+      <div className="px-5 md:px-20 py-20 mt-4" id="trending">
         <div className="mb-10 flex flex-row items-center gap-x-4">
           <div className="text-3xl">&#128293;</div>{" "}
           <div className={`${saria.className} text-white text-4xl`}>
