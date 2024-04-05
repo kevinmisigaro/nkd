@@ -7,6 +7,7 @@ import { saria } from "@/utils/font";
 import PlaceCard from "@/components/PlaceCard";
 import EventCard from "@/components/EventCard";
 import { animateScroll as scroll } from "react-scroll";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const scrollToId = () => {
@@ -85,6 +86,8 @@ export default function Home() {
           <EventCard />
         </div>
       </div>
+
+      <Footer />
     </RootLayout>
   );
 }

@@ -35,10 +35,10 @@ export default function RootLayout({
       </head>
       <CSPostHogProvider>
         <body>
-          <div className="bg-gray-950 relative">
+          <div className="bg-gray-950 static">
             <Navbar />
-            <main>{children}</main>
-            <Footer />
+            <main className="">{children}</main>
+            {/* <Footer /> */}
           </div>
         </body>
       </CSPostHogProvider>
