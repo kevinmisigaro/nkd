@@ -34,8 +34,8 @@ export default function RootLayout({
         />
       </head>
       <CSPostHogProvider>
-        <body>
-          <div className="bg-gray-950 static">
+        <body className="bg-gray-950">
+          <div className="static">
             <Navbar />
             <main className="">{children}</main>
             {/* <Footer /> */}
