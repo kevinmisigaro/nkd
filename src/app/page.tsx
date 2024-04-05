@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import RootLayout from "./layout";
 import { saria } from "@/utils/font";
 import PlaceCard from "@/components/PlaceCard";
+import EventCard from "@/components/EventCard";
 
 export default function Home() {
   const getData = async () => {
@@ -70,9 +71,9 @@ export default function Home() {
           <div className="text-3xl">&#128293;</div>
         </div>
         <div className="grid grid-cols-1 items-center md:grid-cols-3 gap-x-10 gap-y-10">
-          <PlaceCard />
-          <PlaceCard />
-          <PlaceCard />
+          <EventCard />
+          <EventCard />
+          <EventCard />
         </div>
       </div>
     </RootLayout>
