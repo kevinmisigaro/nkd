@@ -54,18 +54,26 @@ export default function Home() {
           </div>{" "}
           <div className="text-3xl">&#128293;</div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-10">
-          <PlaceCard />
-          <PlaceCard />
-          <PlaceCard />
+        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-x-10 gap-y-10">
           <PlaceCard />
           <PlaceCard />
           <PlaceCard />
         </div>
       </div>
 
-      <div className="px">
-        
+      <div className="px-5 md:px-20 py-20">
+        <div className="mb-10 flex flex-row items-center gap-x-4">
+          <div className="text-3xl">&#128293;</div>{" "}
+          <div className={`${saria.className} text-white text-4xl`}>
+            Upcoming Events
+          </div>{" "}
+          <div className="text-3xl">&#128293;</div>
+        </div>
+        <div className="grid grid-cols-1 items-center md:grid-cols-3 gap-x-10 gap-y-10">
+          <PlaceCard />
+          <PlaceCard />
+          <PlaceCard />
+        </div>
       </div>
     </RootLayout>
   );
