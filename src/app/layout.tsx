@@ -10,6 +10,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <title>Krowd</title>
+        <meta property="og:url" content="https://www.partykrowd.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Krowd" />
+        <meta name="twitter:card" content="summary" />
+        <meta property="og:description" content="Know where the party is." />
+        <meta
+          name="image"
+          property="og:image"
+          content="/assets/images/projectkrowdlogo.png"
+        />
+        <meta property="og:image:type" content="image/svg+xml" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="logo" />
+        <meta name="image" content="/assets/images/projectkrowdlogo.png" />
+        <meta name="description" content="Know where the party is." />
+        <meta
+          name="twitter:image"
+          content="/assets/images/projectkrowdlogo.png"
+        />
+      </head>
       <CSPostHogProvider>
         <body>
           <div className="bg-gray-950 relative">
