@@ -1,13 +1,11 @@
 "use client";
 
-import { supabase } from "@/utils/supabase";
-import { useEffect } from "react";
 import RootLayout from "./layout";
 import { saria } from "@/utils/font";
-import PlaceCard from "@/components/PlaceCard";
-import EventCard from "@/components/EventCard";
 import { animateScroll as scroll } from "react-scroll";
 import Footer from "@/components/Footer";
+import EventsGrid from "@/components/EventsGrid";
+import PlacesGrid from "@/components/PlacesGrid";
 
 export default function Home() {
   const scrollToId = () => {
@@ -17,15 +15,6 @@ export default function Home() {
       scroll.scrollTo(offset);
     }
   };
-  const getData = async () => {
-    const { data, error } = await supabase.from("places").select("*");
-
-    console.log(data);
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
 
   return (
     <RootLayout>
@@ -57,7 +46,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-5 md:px-20 py-20 mt-4" id="trending">
+      <div className="px-5 md:px-20 pt-20 pb-5 mt-4" id="trending">
         <div className="mb-10 flex flex-row items-center gap-x-4">
           <div className="text-3xl">&#128293;</div>{" "}
           <div className={`${saria.className} text-white text-4xl`}>
@@ -65,29 +54,24 @@ export default function Home() {
           </div>{" "}
           <div className="text-3xl">&#128293;</div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-x-10 gap-y-10">
-          <PlaceCard />
-          <PlaceCard />
-          <PlaceCard />
-        </div>
+
+        <EventsGrid />
       </div>
 
-      <div className="px-5 md:px-20 py-20">
+      <div className="px-5 md:px-20 pt-20 pb-5">
         <div className="mb-10 flex flex-row items-center gap-x-4">
           <div className="text-3xl">&#128293;</div>{" "}
           <div className={`${saria.className} text-white text-4xl`}>
-            Upcoming Events
+            Top Spots
           </div>{" "}
           <div className="text-3xl">&#128293;</div>
         </div>
-        <div className="grid grid-cols-1 items-center md:grid-cols-3 gap-x-10 gap-y-10">
-          <EventCard />
-          <EventCard />
-          <EventCard />
-        </div>
+        <PlacesGrid />
       </div>
 
-      <Footer />
+      <div className="mt-20">
+        <Footer />
+      </div>
     </RootLayout>
   );
 }
