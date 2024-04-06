@@ -31,7 +31,7 @@ function PlacesGrid() {
   return (
     <div className="grid grid-cols-1 items-center md:grid-cols-3 gap-x-10 gap-y-10">
       {places.map((place) => (
-        <PlaceCard place={place} />
+        <PlaceCard place={place} key={place.id} />
       ))}
     </div>
   );

@@ -30,7 +30,7 @@ export default function EventsGrid() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-x-10 gap-y-10">
       {events.map((eventD) => (
-        <EventCard eventData={eventD} />
+        <EventCard eventData={eventD} key={eventD.id} />
       ))}
     </div>
   );
